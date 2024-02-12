@@ -72,7 +72,7 @@ const ResetPassword = () => {
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={checkPassword}
-                  disabled={values.npassword !== values.cpassword&& }
+                  disabled={values.npassword !== values.cpassword}
                 >
                   Change password
                 </button>
