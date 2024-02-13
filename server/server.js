@@ -4,7 +4,13 @@ const cors = require("cors");
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://whitefusionboard.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 app.use(morgan("tiny"));
 app.disable("x-powered-by");
 const port = 3000;
