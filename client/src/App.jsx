@@ -27,8 +27,8 @@ function App() {
           <Route path="*" element={<ErrorPage />} />
           <Route path="pricing" element={<Pricing />} />
           <Route
-            path={isLoggedIn ? "dashboard" : "*"}
-            element={isLoggedIn ? <DashBoard /> : <ErrorPage />}
+            path={isLoggedIn ? "dashboard" : ""}
+            element={isLoggedIn ? <DashBoard /> : "Please login"}
           >
             <Route path="/dashboard/profile" element={<Profile />} />
             <Route path="/dashboard/meeting" element={<MeetingPage />} />
