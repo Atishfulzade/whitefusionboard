@@ -5,7 +5,7 @@ import { loginSchema } from "../utils/validate";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { loginUser } from "../utils/helper";
 import toast from "react-hot-toast";
-const Login = () => {
+const Login = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
 
   const { values, errors, touched, handleChange, handleSubmit } = useFormik({
@@ -25,6 +25,7 @@ const Login = () => {
         console.log(res);
         let { token } = res;
         localStorage.setItem("token", token);
+        setIsLoggedIn(true);
         navigate("/dashboard");
       });
     },

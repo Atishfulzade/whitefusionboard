@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import { signUpSchema } from "../utils/validate";
 import { registerUser } from "../utils/helper";
 import { toast, Toaster } from "react-hot-toast";
-const Register = () => {
+const Register = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
   const { handleChange, handleSubmit, touched, values, errors } = useFormik({
     initialValues: {
@@ -23,6 +23,7 @@ const Register = () => {
         error: "There was an error",
       });
       registerPromise.then(function () {
+        setIsLoggedIn(true);
         navigate("/dashboard");
       });
     },

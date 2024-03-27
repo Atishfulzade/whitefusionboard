@@ -54,9 +54,9 @@ const DashBoard = () => {
             className="h-10 w-10 object-contain  rounded-lg"
           />
         </div>
-        <div className="flex pt-20 flex-col ps">
-          <h3>Welcome to WhiteBoardFusion!</h3>
-          <p>
+        <div className="flex pt-20 flex-col md:w-[500px] mx-auto">
+          <h3 className=" text-center text-xl">Welcome to WhiteBoardFusion!</h3>
+          <p className=" text-center mt-2">
             A space where ideas flow seamlessly. Whether you're a student,
             professional, or enthusiast, our real-time whiteboard sharing brings
             your creativity to life.

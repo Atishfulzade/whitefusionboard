@@ -17,7 +17,7 @@ import MeetingPage from "./Component/MeetingPage";
 import HelpPage from "./Component/HelpPage";
 import SettingPage from "./Component/SettingPage";
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <BrowserRouter>
       <Toaster />
@@ -36,7 +36,7 @@ function App() {
             <Route path="/dashboard/help" element={<HelpPage />} />
           </Route>
           <Route index={true} element={<Home />} />
-          <Route path="login" element={<Login />}>
+          <Route path="login" element={<Login setIsLoggedIn={setIsLoggedIn} />}>
             <Route path="/login/enter_email" element={<EnterEmail />} />
 
             <Route path="/login/recovery" element={<Recovery />}>
@@ -46,7 +46,10 @@ function App() {
               />
             </Route>
           </Route>
-          <Route path="register" element={<Register />} />
+          <Route
+            path="register"
+            element={<Register setIsLoggedIn={setIsLoggedIn} />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>
