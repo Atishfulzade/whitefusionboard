@@ -4,7 +4,7 @@ import Avatar from "../assets/user.png";
 const Profile = () => {
   const [profilePic, setProfilePic] = useState();
   return (
-    <div className=" h-[90%] bg-slate-500 w-[20%] absolute right-3 top-5 rounded-md p-3 flex items-center flex-col  border-2 border-white shadow-lg shadow-inner ">
+    <div className=" h-[90%] bg-slate-500 w-[20%] absolute right-3 top-5 rounded-md p-3 flex items-center flex-col  border-2 border-white shadow-lg54 shadow-inner ">
       <div className="flex justify-between w-full items-center">
         <h1 className="text-2xl">Profile</h1>
         <span className="text-xl">

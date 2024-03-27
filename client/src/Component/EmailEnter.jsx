@@ -5,7 +5,7 @@ const EnterEmail = () => {
   const navigate = useNavigate();
   return (
     <div
-      className="h-full w-full absolute dark:bg-slate-800   z-50  flex justify-center items-center backdrop-blur left-0
+      className="h-[50vh] w-full absolute dark:bg-slate-800   z-50  flex justify-center items-center backdrop-blur left-0
      "
     >
       <div className="w-[500px]  top-0  bg-white rounded-lg glass  h-[300px] flex items-center  justify-center mx-auto">

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Recovery = () => {
   const navigate = useNavigate();
   return (
-    <div className="h-full w-full absolute dark:bg-slate-800   z-50  flex justify-center items-center backdrop-blur left-0 ">
+    <div className="h-screen w-full absolute dark:bg-slate-800   z-50  flex justify-center items-center backdrop-blur left-0 ">
       <Outlet />
       <div className="w-[500px]  top-0 rounded-lg glass  h-[300px] flex items-center  justify-center mx-auto ">
         <div className="mt-7     ">
@@ -30,8 +30,9 @@ const Recovery = () => {
                   <div className="relative">
                     <input
                       type="number"
-                      placeholder="____"
+                      placeholder="_ _ _ _"
                       name="otp"
+                      maxLength={4}
                       className="py-3 px-4 block w-full border-2 outline-none bg-transparent dark:text-slate-200 border-gray-400 rounded-md text-sm  focus:ring-blue-500 shadow-sm"
                     />
                   </div>

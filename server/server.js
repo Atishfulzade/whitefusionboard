@@ -1,7 +1,9 @@
 const express = require("express");
 const morgan = require("morgan");
+require("dotenv").config();
 const cors = require("cors");
-
+const connect = require("./database/conn.js");
+const router = require("./router/route.js");
 const app = express();
 app.use(express.json());
 app.use(
@@ -11,13 +13,25 @@ app.use(
     credentials: true,
   })
 );
+
 app.use(morgan("tiny"));
 app.disable("x-powered-by");
-const port = 3000;
 
 app.get("/", (req, res) => {
-  res.status(201).json("get home");
+  res.json("get home");
 });
-app.listen(port, () => {
-  console.log(`Server is open at localhost ${port}`);
-});
+
+// api route
+app.use("/api", router);
+
+connect()
+  .then(() => {
+    // Listening to the port
+    app.listen(process.env.PORT, () => {
+      console.log(`Server is open at localhost:${process.env.PORT}`);
+    });
+  })
+  .catch((error) => {
+    // Handling errors during database connection
+    console.error("Error connecting to database:", error);
+  });

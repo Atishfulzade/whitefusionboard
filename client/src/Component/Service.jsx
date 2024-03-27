@@ -4,8 +4,8 @@ import img2 from "../assets/2.png";
 import img3 from "../assets/3.png";
 const Service = () => {
   return (
-    <div className="dark:bg-slate-700 w-full h-full flex flex-col py-5 items-center gap-7">
-      <div className="glass h-[400px] flex flex-col items-center  flex-wrap w-[70%] md:flex-row shadow-md   md:justify-around md:pt-0">
+    <div className="dark:bg-slate-800 w-full h-full flex flex-col py-5 items-center gap-7">
+      <div className="glass h-[400px] flex flex-col items-center  flex-wrap w-[70%] md:flex-row shadow   md:justify-around md:pt-0">
         <div className=" h-28 order-2 p-5 md:w-1/2 md:flex md:flex-col md:items-center md:justify-center">
           <h2 className="text-center text-3xl md:text-4xl md:text-left lg:text-5xl lg:text-left">
             Share your whiteboard

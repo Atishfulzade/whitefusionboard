@@ -14,7 +14,7 @@ export const loginSchema = Yup.object({
 });
 
 export const signUpSchema = Yup.object({
-  name: Yup.string().min(2).max(25).required("Enter your name...!"),
+  username: Yup.string().min(2).max(25).required("Enter username"),
   email: Yup.string()
     .email("Invalid email address")
     .required("Enter your email...!"),
